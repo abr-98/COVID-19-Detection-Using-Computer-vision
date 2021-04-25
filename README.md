@@ -67,8 +67,35 @@ The loss curve
 Available: https://github.com/abr-98/COVID_dataset
 
 Subset of **Covidx** dataset as benchmark proposed by authors of https://www.nature.com/articles/s41598-020-76550-z.
+The details of the dataset can be found on https://github.com/abr-98/COVID_dataset.
 
 #### Architecture proposed by the authors of https://www.nature.com/articles/s41598-020-76550-z:
 ![Arch1](https://raw.githubusercontent.com/abr-98/COVID-19-Detection-Using-Computer-vision/main/Image_COVID/ARCH_X_rays_2.webp)
+
+The archtecture is a light-weight projection-expansion-projection-extenstion (PEPX) module for deep feature extraction from Chest-X-rays.
+
+### Adapted Architecture:
+
+For this work, a slightly modified approach proposed by the authors of https://doi.org/10.1016/j.imu.2020.100360 have been adapted:
+
+![Arch2](https://github.com/abr-98/COVID-19-Detection-Using-Computer-vision/blob/main/Image_COVID/ARCH_X_Rays.jpg)
+
+The architecture uses two of the most used and important deep convolutional networks Residual, and Xception Network (https://openaccess.thecvf.com/content_cvpr_2017/papers/Chollet_Xception_Deep_Learning_CVPR_2017_paper.pdf). Xception Networks stands for extreme inception and builds on the idea of 1x1 convolution to decrease the computational cost to a further level. Xception uses a concept of seperable convolutional layers. It uses seperable depth-wise convolutional network and a point-wise convolutional layers. The idea is to explore each channel spatially and then go for the depth wise feature discovery.
+
+References for Xception:
+1. https://maelfabien.github.io/deeplearning/xception/#
+2. https://towardsdatascience.com/a-comprehensive-introduction-to-different-types-of-convolutions-in-deep-learning-669281e58215
+3. https://towardsdatascience.com/an-intuitive-guide-to-deep-network-architectures-65fdc477db41
+
+The proposed architecture parallely uses these two networks for feature extraction purposes and then passes the concatenation of the features obtained through another convolutional layers and finally uses softmax to predict. 
+
+Originally, the proposed architecture classified in three classes, so used softmax, but in this work, the model has been modified for a binary clasification of Normal and Covid cases. The input data dimension has also been modified.
+
+### Results:
+We have achieved a 97% accuracy using the best model on validation dataset.
+
+![Class_rep](https://github.com/abr-98/COVID-19-Detection-Using-Computer-vision/blob/main/Image_COVID/classification_report_x_ray.png)
+
+The above image represents the classification report for the proposed network.
 
 

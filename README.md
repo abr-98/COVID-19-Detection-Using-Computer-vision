@@ -12,8 +12,23 @@ Reference Papers:
 
 ## COVID-19 Detection using Chest CT Scans:
 
-Dataset:
+### Dataset:
 
-![Instance 1](https://github.com/abr-98/COVID_dataset/blob/main/COVID_CT/data/137covid_patient10_SR_2_IM00015.tif)
+https://github.com/abr-98/COVID_dataset/tree/main/COVID_CT
+
+Contains 12058 images of processed city scan images of chest of patients, the metadata contains the labels. Images are present in '.tif' format.
+
+### Architecture
+
+The followed Architecture is a modified approach based on the architecture proposed by the authors of: https://doi.org/10.1016/j.bspc.2021.102588. 
+
+![Arch](https://github.com/abr-98/COVID-19-Detection-Using-Computer-vision/blob/main/Image_COVID/ARCH_CT.jpg)
+ 
+In the publication, the defined size of the image is (512,512,1), in this work the size of the image used is reduces to (256,256,1).
+The original work uses softmax and categorical cross-entropy and a 2-node output, which has been modified to 1-node in the output layer, sigmoid function, and binary-crossentropy.
+
+
+
+
 
 

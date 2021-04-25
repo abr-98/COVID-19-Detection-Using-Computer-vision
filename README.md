@@ -61,3 +61,14 @@ The loss curve
 ![Loss](https://github.com/abr-98/COVID-19-Detection-Using-Computer-vision/blob/main/Image_COVID/CT_loss.png)
 
 
+## COVID-19 Detection using Chest X-Rays:
+
+## Dataset
+Available: https://github.com/abr-98/COVID_dataset
+
+Subset of **Covidx** dataset as benchmark proposed by authors of https://www.nature.com/articles/s41598-020-76550-z.
+
+#### Architecture proposed by the authors of https://www.nature.com/articles/s41598-020-76550-z:
+![Arch1](https://raw.githubusercontent.com/abr-98/COVID-19-Detection-Using-Computer-vision/main/Image_COVID/ARCH_X_rays_2.webp)
+
+

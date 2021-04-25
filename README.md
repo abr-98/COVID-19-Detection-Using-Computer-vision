@@ -46,7 +46,18 @@ The above figure tries to project an idea. In this type of architecture, we use 
 
 ![FPN_2](https://github.com/abr-98/COVID-19-Detection-Using-Computer-vision/blob/main/Image_COVID/FPN.png) 
 
-The image shows the implementing architecture. The Bottom-up limb and the top-down limb is concatenated with a 1x1 conv. 1x1 conv helps in dimension reduction, channelwise. The concatenation is done to decrease the aliasing effect of the upsampling, that doubles the size of image in the top-down limb. The upsampling layer simply increases the dimension of the image,
+The image shows the implementing architecture. The Bottom-up limb and the top-down limb is concatenated with a 1x1 conv. 1x1 conv helps in dimension reduction, channelwise. The concatenation is done to decrease the aliasing effect of the upsampling, that doubles the size of image in the top-down limb. The upsampling layer simply increases the dimension of the image by twice.
 
+The resource https://jonathan-hui.medium.com/understanding-feature-pyramid-networks-for-object-detection-fpn-45b227b9106c can be used for better understanding.
+
+### Results:
+
+The model has achieved an test accuracy of 99%
+
+The Accuracy curve 
+![Accuracy](https://github.com/abr-98/COVID-19-Detection-Using-Computer-vision/blob/main/Image_COVID/CT_acc.png)
+
+The loss curve
+![Loss](https://github.com/abr-98/COVID-19-Detection-Using-Computer-vision/blob/main/Image_COVID/CT_loss.png)
 
 
